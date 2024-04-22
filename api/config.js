@@ -1,5 +1,7 @@
-const firebase = require("firebase");
+const admin = require("firebase-admin");
+const serviceAccount = require('./secrets/gemini-420917-firebase-adminsdk-jyebc-cb3d36c251.json');
 const firebaseConfig = {
+  credential: admin.credential.cert(serviceAccount),
   apiKey: "AIzaSyAcKLHwP_Z7UBHR7PoplAgbc7UGHLCVZKM",
   authDomain: "gemini-420917.firebaseapp.com",
   projectId: "gemini-420917",
@@ -8,7 +10,7 @@ const firebaseConfig = {
   appId: "1:860472482408:web:72703576965eef4c77f9dd",
   measurementId: "G-D0P2GM71MH"
 };
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+admin.initializeApp(firebaseConfig);
+const db = admin.firestore();
 const Image = db.collection("Images");
 module.exports = Image;

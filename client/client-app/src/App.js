@@ -21,26 +21,6 @@ const GetImages = ()=>{
 }
 
 
-
-  return (
-    <div className="App">
-      <h1>Welcome, Jon</h1>
-      <h4>Your Images</h4>
-
-      <div className = "images">
-        {images.map(image=>(
-          <div className = "image">
-            <div className = "title">{image.title}</div>
-            <div id = "picture">
-              <img src = {image.img}/>
-            </div>
-            <div className = "author">{image.author}</div>
-          </div>
-        ))}
-      </div>
-      
-    </div>
-  );
 }
 
 export default App;
