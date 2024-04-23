@@ -9,6 +9,7 @@
   "author": "Jonathan Riklan",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.8.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "firebase": "^8.10.1",
